@@ -41,7 +41,7 @@ public class StockServiceTest {
 
     @Test
     @DisplayName("100개의 요청이 들어온 재고 감소 테스트 - race condition 발생")
-    public void 많은_요청_재고_감소_태스트() throws InterruptedException {
+    public void 많은_요청_재고_감소_태스트_실패() throws InterruptedException {
         int threadCount = 100;
         ExecutorService executorService = Executors.newFixedThreadPool(32);
         CountDownLatch latch = new CountDownLatch(threadCount);
