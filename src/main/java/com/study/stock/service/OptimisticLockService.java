@@ -9,12 +9,12 @@ import org.springframework.transaction.annotation.Transactional;
 public class OptimisticLockService {
     private final StockRepository stockRepository;
 
-    public OptimisticLockService(StockRepository stockRepository){
+    public OptimisticLockService(StockRepository stockRepository) {
         this.stockRepository = stockRepository;
     }
 
     @Transactional
-    public void decrease(Long id, Long quantity){
+    public void decrease(Long id, Long quantity) {
         Stock stock = stockRepository.findByIdWithOptimisticLock(id);
 
         stock.decreaseQuantity(quantity);

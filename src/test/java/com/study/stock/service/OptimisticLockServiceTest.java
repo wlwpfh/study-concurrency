@@ -6,7 +6,6 @@ import com.study.stock.repository.StockRepository;
 import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.stereotype.Service;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
